@@ -1,8 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package code;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 /**
  *
@@ -15,42 +14,66 @@ public class School extends Activity {
     private int hours;
     private String[] assignments;
     
-    void setCourse(String newCourse)
+    public School()
+    {
+    	time = null;
+    	date = null;
+    	location = "";
+    	extraInfo = "";
+    	course = "";
+    	grade = 0;
+    	hours = 0;
+    	assignments = null;
+    }
+
+    public School(LocalTime time_, LocalDate date_, String location_, String course_, float grade_, int hours_, String[] assignments_)
+    {
+    	time = time_;
+    	date = date_;
+    	location = location_;
+    	extraInfo = "school";
+    	course = course_;
+    	grade = grade_;
+    	hours = hours_;
+    	assignments = assignments_;
+    }
+    
+    public void setCourse(String newCourse)
     {
         course = newCourse;
     }
     
-    void setGrade(float newGrade)
+    public void setGrade(float newGrade)
     {
         grade = newGrade;
     }
     
-    void setHours(int newHours)
+    public void setHours(int newHours)
     {
         hours = newHours;
     }
     
-    void setAssignments(String[] newAssignments)
+    public void setAssignments(String[] newAssignments)
     {
         assignments = newAssignments;
     }
     
-    String getCourse()
+    public String getCourse()
     {
         return course;
     }
     
-    float getGrade()
+    public float getGrade()
     {
         return grade;
     }
     
-    int getHours()
+    public int getHours()
     {
         return hours;
     }
     
-    String[] getAssignments()
+    public String[] getAssignments()
     {
         return assignments;
     }

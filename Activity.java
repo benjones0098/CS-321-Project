@@ -1,27 +1,44 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
+ * 
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+package code;
 import java.util.*;
-
+import java.time.*;
+import java.io.Serializable;
 /**
  *
  * @author Benjamin Jones
  */
-public class Activity {
-    private Date time;
-    private Date date;
-    private String location;
-    private String extraInfo;
+public class Activity implements Serializable{
+    protected LocalTime time;
+    protected LocalDate date;
+    protected String location;
+    protected String extraInfo;
     
-    public void setTime(Date newTime)
+    public Activity()
+    {
+    	time = null;
+    	date = null;
+    	location = "";
+    	extraInfo = "";
+    }
+    
+    public Activity(LocalTime time_, LocalDate date_, String location_, String extraInfo_)
+    {
+    	time = time_;
+    	date = date_;
+    	location = location_;
+    	extraInfo = extraInfo_;
+    }
+    
+    public void setTime(LocalTime newTime)
     {
         time = newTime;
     }
     
-    public void setDate(Date newDate)
+    public void setDate(LocalDate newDate)
     {
         date = newDate;
     }
@@ -36,12 +53,12 @@ public class Activity {
         extraInfo = newExtraInfo;
     }
     
-    public Date getTime()
+    public LocalTime getTime()
     {
         return time;
     }
     
-    public Date getDate()
+    public LocalDate getDate()
     {
         return date;
     }
