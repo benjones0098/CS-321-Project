@@ -72,5 +72,7 @@ public class Activity implements Serializable{
     {
         return extraInfo;
     }
+    
+    
 }
 
